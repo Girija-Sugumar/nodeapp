@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: portfolio
-          image: nodeazuredevops.azurecr.io/girija-sugumar/nodeapp:4
+          image: nodeazuredevops.azurecr.io/girija-sugumar/nodeapp
           imagePullPolicy: Always 
           ports:
             - containerPort: 3000 
