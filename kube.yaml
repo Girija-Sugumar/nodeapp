@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment 
 metadata:
-  name: portfolio-deployment 
+  name: jenkins-deploy 
   labels:
-    app: portfolio
+    app: jenkins
 spec:
   replicas: 1 
   selector:
     matchLabels:
-      app: portfolio
+      app: jenkins
   template:
     metadata:
       labels:
-        app: portfolio
+        app: jenkins
     spec:
       containers:
-        - name: portfolio
+        - name: jenkinscontainer
           image: nikkoworld/nikkoimg
           imagePullPolicy: Always 
           ports:
@@ -24,13 +24,13 @@ spec:
 apiVersion: v1
 kind: Service 
 metadata:
-  name: portfolio-service
+  name: jenkins-service
   labels:
-    app: portfolio
-spec:
-  type: LoadBalancer 
+    app: jenkins
+spec: 
   selector:
-    app: portfolio
+    app: jenkins
+  type: LoadBalancer
   ports:
-    - port: 80
+    - port: 8070
       targetPort: 3000
