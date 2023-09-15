@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('Jenkins Kubernetes Deployments')
+  res.send('Jenkins Kubernetes Deploymentss')
 })
 
 app.get('/app', (req, res) => {
