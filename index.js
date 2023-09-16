@@ -3,11 +3,11 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('Jenkins Kubernetes Deployments')
+  res.send('sample kubernetes deploy')
 })
 
 app.get('/app', (req, res) => {
-  res.send('Jenkins Pipeline with kubernetes configuration in windows')
+  res.send('app function')
 })
 
 app.listen(port, () => {
