@@ -3,11 +3,11 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('sample kubernetes deploy')
+  res.send('argocd testing')
 })
 
-app.get('/app', (req, res) => {
-  res.send('app function')
+app.get('/res', (req, res) => {
+  res.send('configured.')
 })
 
 app.listen(port, () => {
